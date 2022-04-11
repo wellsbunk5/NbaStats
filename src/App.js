@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Route,  Routes, HashRouter as Router} from 'react-router-dom';
+// import {CSSTransition} from 'react-transition-group';
+import LoadingIndicator from './LoadingIndicator';
+import Header from './Header';
+import { useFetchTeamData } from './ServerApi';
+import TeamList from './TeamList';
+import Standings from './Standings';
+import TeamStatPage from './TeamStatPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const teamsData = useFetchTeamData();
+
+  if (!teamsData.eastTeams["14"] || !teamsData.westTeams["14"]) {
+    return <LoadingIndicator />;
+  } else {
+    return (
+      <Router>
+        <div className='App'>
+            <Header />
+          <div id="standings">
+            <Routes>
+              <Route path="/:conference/:ranking"  element={<TeamStatPage teamsData={teamsData} />}/>
+              <Route path="/"  element={<Standings teamsData={teamsData} />}/>
+            </Routes>
+          </div>
+          <div id="teamListArea">
+            <div id="teamList">
+              <TeamList teamsData={teamsData}/>
+            </div>
+          </div>
+        </div>
+      </Router>
+    );
+    
+  }
+
 }
 
 export default App;

@@ -1,0 +1,19 @@
+.teamListTitle {
+    text-align: center;
+}
+  
+.teamListItem {
+    margin-left: 55px;
+    margin-top: 5px;
+    font-size: medium;
+}
+.teamLogo {
+    height: 20px;
+    width: 20px;
+    margin-left: 3px;
+}
+  
+.teamNameSpan {
+    padding-left: 3px;
+    margin-left: 3px;
+}

@@ -1,0 +1,53 @@
+table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns: 
+      minmax(30px, 3fr)
+      minmax(5px, 1fr)
+      minmax(5px, 1fr)
+      minmax(5px, 1.5fr)
+      minmax(5px, 1.25fr)
+      minmax(5px, 2fr)
+      minmax(5px, 2fr)
+      minmax(5px, 1fr)
+      minmax(5px, 2fr);
+}
+  
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 2px;
+    font-size: small;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+th {
+    border-width: 1.5px;
+    border-style: dashed none dashed;
+    border-color: #CBCCCC;
+}
+td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+tr:nth-child(even) td {
+    background: #CBCCCC;
+}
+tbody:last-child {
+    border-style: none none dashed;
+}
+
+.ConferenceHeading {
+    padding-left: 0.5em;
+}
+
+.StandingsHeading {
+    text-align: center;
+}

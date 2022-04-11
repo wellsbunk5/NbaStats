@@ -1,0 +1,103 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 7em;
+}
+
+#teamName {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    font-size: 3em;
+}
+
+#teamTitle {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.5em;
+}
+
+#statsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 8em 8em;
+    grid-template-areas: 
+        "totalWins totalLosses percentage gamesBehind"
+        "homeRecord awayRecord streak lastTen";
+}
+
+.statHeading {
+    border-style: none none solid;
+    border-color: #CBCCCC;
+    border-width: thin;
+    padding-left: 0.3em;
+}
+
+.statWrapper {
+    border-style:double;
+    border-radius: 15px;
+    border-color: gray;
+    margin: 1em 1.5em 1em;
+}
+
+.statBox {
+    text-align: center;
+    padding-top: 0.5em;
+    font-size: 1.25em;
+    font-weight: 450;
+}
+  
+  
+.statHeader {
+    height: 1.5em;
+    background-color: #06143f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+    text-align: center;
+}
+  
+  
+#totalWins {
+    grid-area: totalWins;
+}
+  
+#totalLosses {
+    grid-area: totalLosses;
+}
+
+#percentage {
+    grid-area: percentage;
+}
+
+#gamesBehind {
+    grid-area: gamesBehind;
+}
+
+#homeRecord {
+    grid-area: homeRecord;
+}
+
+#awayRecord {
+    grid-area: awayRecord;
+}
+
+#streak {
+    grid-area: streak;
+}
+
+#lastTen {
+    grid-area: lastTen;
+}
+
+.greentext {
+    color: #8fce00;
+}
+
+.redtext {
+    color: #f44336;
+}

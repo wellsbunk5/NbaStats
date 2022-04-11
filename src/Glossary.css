@@ -1,0 +1,35 @@
+.Glossary-Header {
+    font-weight: 500;
+}
+
+.glossary-flex {
+    display: flex;
+    flex-direction: row;
+    padding: 0.3em;
+    font-size: 0.75em;
+}
+
+.GlossaryInfo {
+    font-weight: 500;
+}
+
+.no-bold {
+    font-weight: 400;
+}
+
+.Left-Section {
+    width: 50%;
+    text-align: left;
+}
+
+.Right-Section {
+    width: 50%;
+    text-align: left;
+}
+
+.Glossary {
+    border-top: solid;
+    border-color: #CBCCCC;
+    border-width: thin;
+    margin: 0.3em;
+}

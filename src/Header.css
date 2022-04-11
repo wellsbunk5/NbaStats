@@ -1,0 +1,47 @@
+#title-block {
+    background-color: #06143f;
+    width: 100%;
+    height: 130px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    text-align: center;
+    flex-direction: column;
+}
+header {
+    grid-area: header;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+div.title {
+    display: block;
+    font-size: 4.5em;
+    font-weight: 300;
+    padding-top: .1em;
+}
+    
+    div.subtitle {
+    display: block;
+    font-size: 1em;
+    padding-top: 0;
+}
+    
+    #nav-bar {
+    background-color: #fff;
+    color:gray;
+    height: 40px;
+    vertical-align: bottom;
+}
+    .nav-bar-textStyle {
+      color: black;
+      margin-left: 1em;
+      padding-top: 0.5em;
+      font-size: 1.25em;
+}
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 25px !important;
+}
