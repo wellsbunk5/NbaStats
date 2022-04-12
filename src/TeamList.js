@@ -9,7 +9,7 @@ function TeamListItem (props) {
         <span>
           <img src={team.logo} className="teamLogo" />
         </span>
-        <Link className='teamNameSpan' to={`/${team.conference}/${team.ranking}`}>
+        <Link className='teamNameSpan' to={`/${team.conference}/${team.ranking}`} onClick={() => props.setStateFunc(true)}>
           {team.teamName}
         </Link>
       </li>);

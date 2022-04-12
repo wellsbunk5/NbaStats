@@ -1,6 +1,8 @@
 import {useFetchPreviousGames} from './ServerApi';
 import { useParams } from 'react-router';
 import './TeamStatPage.css';
+import { useState } from 'react';
+import LoadingIndicator from './LoadingIndicator';
 
 function TeamStatHeader(props) {
     return (
@@ -92,7 +94,6 @@ function TeamStatPage (props) {
     const EAST = "east";
     const WEST = "west";
     let team;
-    let previousGames;
   
   
     const getCorrectTeam = function (conference, ranking) {
@@ -105,9 +106,9 @@ function TeamStatPage (props) {
     };
   
     team = getCorrectTeam(params.conference, params.ranking);
+    
   
-    previousGames = useFetchPreviousGames(team);
-  
+    const previousGames = useFetchPreviousGames(team);
   
   
     return (
@@ -117,7 +118,6 @@ function TeamStatPage (props) {
         <TeamStatSection team={team}/>
         <br/>
         <TeamGamesSection previousGames={previousGames}/>
-  
       </>
     );
 }

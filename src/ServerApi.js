@@ -19,7 +19,6 @@ function useFetchPreviousGames(team) {
         let gamesCached = 0;
         let currentGameNumber = STARTING_GAME;
         let game;
-        console.log(gameData);
   
         const createPreviousGameObject = function (game, teamName) {
           let opponentName;
@@ -69,7 +68,7 @@ function useFetchPreviousGames(team) {
       });
   
       return () => mounted = false;
-    }, []);
+    }, [team]);
   
     return previousGames;
 }
