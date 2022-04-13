@@ -50,7 +50,7 @@ function TeamGamesSection (props) {
       header = `Vs ${game.opponentName}`;
       value = `${game.teamScore}-${game.opponentScore}`;
       
-      previousGameElements.push(<TeamStatBox statValue={value} stat="" label={header} winOrLoss={game.winOrLoss}/>)
+      previousGameElements.push(<TeamStatBox key={header} statValue={value} stat="" label={header} winOrLoss={game.winOrLoss}/>)
     });
   
     return (
@@ -74,7 +74,7 @@ function TeamStatSection (props) {
     statLabels.forEach((label, index) => {
       correctKey = correctKeys[index];
       statValue = props.team[correctKey];
-      statBoxElements.push(<TeamStatBox stat={correctKey} statValue={statValue} label={label} />);
+      statBoxElements.push(<TeamStatBox key={label} stat={correctKey} statValue={statValue} label={label} />);
       });
   
     return (

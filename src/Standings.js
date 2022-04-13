@@ -30,7 +30,7 @@ function Table(props) {
       let rows = [];
   
       for (let i=1; i<=15; i++) {
-        rows.push(<TableRow team={conferenceData[i]} rank={i} />)
+        rows.push(<TableRow key={`${conference}${i}`} team={conferenceData[i]} rank={i} />)
       }
    
       return rows;
@@ -67,10 +67,10 @@ function Standings(props) {
         <h1 className='StandingsHeading'>NBA Standings 2021-22</h1>
         <br/>
         <div className='ConferenceHeading'><b>Eastern Conference</b></div>
-        <Table conference={eastTeams} />
+        <Table key="east" conference={eastTeams} />
         <br/>
         <div className='ConferenceHeading'><b>Western Conference</b></div>
-        <Table conference={westTeams} />
+        <Table key="west" conference={westTeams} />
         <br/>
         <Glossary />
       </div>

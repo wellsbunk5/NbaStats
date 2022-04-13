@@ -39,9 +39,9 @@ function TeamList(props) {
         <h1 className='teamListTitle'>NBA Teams</h1>
         <ul>
           {
-            Object.keys(allTeams).map((oneKey,i)=>{
+            Object.keys(allTeams).map((oneKey)=>{
               return (
-                  <TeamListItem  team={allTeams[oneKey]} />
+                  <TeamListItem key={oneKey} team={allTeams[oneKey]} />
                 )
             })
           }
