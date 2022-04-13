@@ -1,8 +1,7 @@
 import {useFetchPreviousGames} from './ServerApi';
 import { useParams } from 'react-router';
 import './TeamStatPage.css';
-import { useState } from 'react';
-import LoadingIndicator from './LoadingIndicator';
+import './App.css'
 
 function TeamStatHeader(props) {
     return (
@@ -112,13 +111,13 @@ function TeamStatPage (props) {
   
   
     return (
-      <>
+      <div className='nav-unit' id='standings'>
         <TeamStatHeader team={team} />
         <br/>
         <TeamStatSection team={team}/>
         <br/>
         <TeamGamesSection previousGames={previousGames}/>
-      </>
+      </div>
     );
 }
 

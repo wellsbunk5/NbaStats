@@ -1,4 +1,5 @@
 import './Standings.css';
+import './App.css'
 import Glossary from './Glossary';
 
 function TableRow (props) {
@@ -62,7 +63,7 @@ function Standings(props) {
     let {eastTeams, westTeams} = props.teamsData;
   
     return (
-      <>
+      <div className='nav-unit' id='standings'>
         <h1 className='StandingsHeading'>NBA Standings 2021-22</h1>
         <br/>
         <div className='ConferenceHeading'><b>Eastern Conference</b></div>
@@ -72,7 +73,7 @@ function Standings(props) {
         <Table conference={westTeams} />
         <br/>
         <Glossary />
-      </>
+      </div>
     )
 }
 
