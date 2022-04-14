@@ -1,8 +1,11 @@
 # Semester Project
 
-Links to the project hosted by Vercel
+Links to the project hosted by Vercel:
+
 nba-stats-ten.vercel.app
+
 nba-stats-wellsbunk5.vercel.app
+
 nba-stats-git-main-wellsbunk5.vercel.app
 
 I am really into the NBA so I decided to do a project involving NBA team stats and standings.
